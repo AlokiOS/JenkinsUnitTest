@@ -22,5 +22,10 @@ pipeline {
                sh "xcodebuild archive -project JenkinsUnitTest.xcodeproj -scheme JenkinsUnitTest -archivePath ~/builds/build/JenkinsUnitTest.xcarchive"
             }
        }
+       stage('Ipa'){
+            steps{
+               sh "$ xcodebuild -exportArchive -archivePath ~/builds/build/JenkinsUnitTest.xcarchive -exportOptionsPlist exportOptions.plist -exportPath ~/builds/build"
+            }
+       }
     }
 }
