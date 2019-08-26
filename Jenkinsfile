@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build'){
             steps{
+                sh "xcodebuild build -project JenkinsUnitTest.xcodeproj -scheme JenkinsUnitTest"
                 echo "build succesfully"
             }
         }
