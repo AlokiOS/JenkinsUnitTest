@@ -16,5 +16,11 @@ pipeline {
                   test "
             }
        }
+       stage('Archive'){
+            steps{
+               sh "mkdir -p build/build"
+               sh "xcodebuild archive -project JenkinsUnitTest.xcodeproj -scheme JenkinsUnitTest -archivePath ~/builds/build/JenkinsUnitTest.xcarchive"
+            }
+       }
     }
 }
