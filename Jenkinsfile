@@ -24,7 +24,7 @@ pipeline {
        }
        stage('Ipa'){
             steps{
-               sh "$ xcodebuild -exportArchive -archivePath ~/builds/build/JenkinsUnitTest.xcarchive -exportOptionsPlist exportOptions.plist -exportPath ~/builds/build"
+               sh "xcodebuild -exportArchive -archivePath ~/builds/build/JenkinsUnitTest.xcarchive -exportOptionsPlist exportOptions.plist -exportPath ~/builds/build"
             }
        }
     }
