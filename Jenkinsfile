@@ -8,7 +8,7 @@ pipeline {
             }
         }
         stage('Test'){
-
+            steps {
             parallel (
                         "Unit Tests": {
                            sh "xcodebuild \
@@ -21,6 +21,7 @@ pipeline {
                             sh "xcodebuild -project JenkinsUnitTest.xcodeproj -scheme "UITests" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.2' test"
                         }
                     )
+        }
             
        }
        stage('Archive'){
