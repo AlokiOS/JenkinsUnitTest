@@ -7,6 +7,11 @@ pipeline {
                 echo "build succesfully"
             }
         }
+        stage('Sonar'){
+            steps{
+                sh "./run-sonar-swift.sh -v"
+            }
+        }
         stage('Test'){
             steps {
             parallel (

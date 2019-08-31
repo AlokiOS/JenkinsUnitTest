@@ -29,8 +29,8 @@ class JenkinsUnitTestUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let x = 2
-        XCTAssertEqual(x, 2)
+       // let x = 2
+        //XCTAssertEqual(x, 2)
     }
 
 }
