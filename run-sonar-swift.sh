@@ -24,7 +24,7 @@
 #
 
 # Global parameters
-SLATHER_CMD=slather
+SLATHER_CMD=/Users/aloksinha/.rvm/gems/ruby-2.5.0/bin/slather
 SWIFTLINT_CMD=swiftlint
 TAILOR_CMD=tailor
 XCPRETTY_CMD=xcpretty
