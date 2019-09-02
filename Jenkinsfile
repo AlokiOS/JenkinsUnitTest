@@ -16,14 +16,14 @@ pipeline {
             steps {
             parallel (
                         "Unit Tests": {
-                           sh "xcodebuild \
+                           sh "xcodebuild clean build\
                   -scheme JenkinsUnitTestTests\
                   -sdk iphonesimulator \
                   -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.2' \
                   test | xcpretty"
                         },
                         "UI Tests": {
-                           sh "xcodebuild \
+                           sh "xcodebuild clean build\
                   -scheme JenkinsUnitTestUITests\
                   -sdk iphonesimulator \
                   -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.2' \
